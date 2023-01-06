@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Craps Calculator</title>
+</head>
+<body>
+
+<center><h1>Craps Calculator</h1></center>
+<hr>
+<form>
+    <b>6/8 PLACE</b> <input type="number" id="sixeightp">
+    <b>WIN</b> <input type="number" id="winsep"><br>
+</form> 
+
+    <button onclick="calculateUnitsWonsep()">Calculate</button>
+
+<form>
+    <b>6/8 ODDS</b>  <input type="number" id="sixeighto">
+    <b>WIN</b> <input type="number" id="winseo"><br>
+    </form> 
+    
+    <button onclick="calculateUnitsWonseo()">Calculate</button>
+<hr>
+
+<form>
+    <b>5/9 PLACE</b> <input type="number" id="fiveninep">
+    <b>WIN</b> <input type="number" id="winfnp"><br>
+    </form> 
+        
+    <button onclick="calculateUnitsWonfnp()">Calculate</button>
+
+
+<form>
+    <b>5/9 ODDS</b> <input type="number" id="fivenineo">
+    <b>WIN</b> <input type="number" id="winfno"><br>
+    </form> 
+            
+    <button onclick="calculateUnitsWonfno()">Calculate</button>
+<hr>
+
+<form>
+    <b>4/10 PLACE</b> <input type="number" id="fourtenp">
+    <b>WIN</b> <input type="number" id="winftp"><br>
+    </form> 
+                
+    <button onclick="calculateUnitsWonftp()">Calculate</button>    
+
+
+<form>
+    <b>4/10 ODDS</b> <input type="number" id="fourteno">
+    <b>WIN</b> <input type="number" id="winfto"><br>
+    </form> 
+                    
+    <button onclick="calculateUnitsWonfto()">Calculate</button>  
+<hr>
+    
+
+<script>
+function calculateUnitsWonsep() {
+  var sixeightp = document.getElementById("sixeightp").value;
+  var winsep = sixeightp * 7 / 6;
+  document.getElementById("winsep").value = winsep;
+}
+function calculateUnitsWonseo() {
+  var sixeighto = document.getElementById("sixeighto").value;
+  var winseo = sixeighto * 7 / 5;
+  document.getElementById("winseo").value = winseo;
+}
+function calculateUnitsWonfnp() {
+  var fiveninep = document.getElementById("fiveninep").value;
+  var winfnp = fiveninep * 7 / 5;
+  document.getElementById("winfnp").value = winfnp;
+}
+function calculateUnitsWonfno() {
+  var fivenineo = document.getElementById("fivenineo").value;
+  var winfno = fivenineo * 3 / 2;
+  document.getElementById("winfno").value = winfno;
+}
+function calculateUnitsWonftp() {
+  var fourtenp = document.getElementById("fourtenp").value;
+  var winftp = fourtenp * 9 / 5;
+  document.getElementById("winftp").value = winftp;
+}
+function calculateUnitsWonfto() {
+  var fourteno = document.getElementById("fourteno").value;
+  var winfto = fourteno * 10 / 5;
+  document.getElementById("winfto").value = winfto;
+}
+</script>
+
+    
+
+</body>
+</html>
