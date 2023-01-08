@@ -3,93 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <title>Craps Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<center><h1>Craps Calculator</h1></center>
-<hr>
-<form>
-    <b>6/8 PLACE</b> <input type="number" id="sixeightp">
-    <b>WIN</b> <input type="number" id="winsep"><br>
-</form> 
-
-    <button onclick="calculateUnitsWonsep()">Calculate</button>
-
-<form>
-    <b>6/8 ODDS</b>  <input type="number" id="sixeighto">
-    <b>WIN</b> <input type="number" id="winseo"><br>
-    </form> 
-    
-    <button onclick="calculateUnitsWonseo()">Calculate</button>
+<center>
+<h1>Craps Calculator</h1>
 <hr>
 
-<form>
-    <b>5/9 PLACE</b> <input type="number" id="fiveninep">
-    <b>WIN</b> <input type="number" id="winfnp"><br>
-    </form> 
-        
-    <button onclick="calculateUnitsWonfnp()">Calculate</button>
+
+<div class="divone">
+  <div>
+    <table>
+      <tr>
+        <td><label for="">6-8 PLACE</label></td>
+        <td><input type="number" id="inputsep"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwsep"></td><br>
+      </tr>
+        <td><button onclick="csep()">BYAAAHHH</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">6-8 ODDS</label></td>
+        <td><input type="number" id="inputseo"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwseo"></td>
+      </tr>
+        <td><button onclick="cseo()">BYAAAHHH</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">5-9 PLACE</label></td>
+        <td><input type="number" id="inputfnp"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwfnp"></td>
+      </tr>
+        <td><button onclick="cfnp()">BYAAAHHH</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">5-9 ODDS</label></td>
+        <td><input type="number" id="inputfno"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwfno"></td>
+      </tr>
+        <td><button onclick="cfno()">BYAAAHHH</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">4-10 PLACE</label></td>
+        <td><input type="number" id="inputftp"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwftp"></td>
+      </tr>
+        <td><button onclick="cftp()">BYAAAHHH</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">4-10 PLACE</label></td>
+        <td><input type="number" id="inputfto"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwfto"></td>
+      </tr>
+        <td><button onclick="cfto()">BYAAAHHH</button></td>
+    </table>
+  </div>
+</div>
+</center>
 
 
-<form>
-    <b>5/9 ODDS</b> <input type="number" id="fivenineo">
-    <b>WIN</b> <input type="number" id="winfno"><br>
-    </form> 
-            
-    <button onclick="calculateUnitsWonfno()">Calculate</button>
-<hr>
-
-<form>
-    <b>4/10 PLACE</b> <input type="number" id="fourtenp">
-    <b>WIN</b> <input type="number" id="winftp"><br>
-    </form> 
-                
-    <button onclick="calculateUnitsWonftp()">Calculate</button>    
-
-
-<form>
-    <b>4/10 ODDS</b> <input type="number" id="fourteno">
-    <b>WIN</b> <input type="number" id="winfto"><br>
-    </form> 
-                    
-    <button onclick="calculateUnitsWonfto()">Calculate</button>  
-<hr>
-    
-
-<script>
-function calculateUnitsWonsep() {
-  var sixeightp = document.getElementById("sixeightp").value;
-  var winsep = sixeightp * 7 / 6;
-  document.getElementById("winsep").value = winsep;
-}
-function calculateUnitsWonseo() {
-  var sixeighto = document.getElementById("sixeighto").value;
-  var winseo = sixeighto * 7 / 5;
-  document.getElementById("winseo").value = winseo;
-}
-function calculateUnitsWonfnp() {
-  var fiveninep = document.getElementById("fiveninep").value;
-  var winfnp = fiveninep * 7 / 5;
-  document.getElementById("winfnp").value = winfnp;
-}
-function calculateUnitsWonfno() {
-  var fivenineo = document.getElementById("fivenineo").value;
-  var winfno = fivenineo * 3 / 2;
-  document.getElementById("winfno").value = winfno;
-}
-function calculateUnitsWonftp() {
-  var fourtenp = document.getElementById("fourtenp").value;
-  var winftp = fourtenp * 9 / 5;
-  document.getElementById("winftp").value = winftp;
-}
-function calculateUnitsWonfto() {
-  var fourteno = document.getElementById("fourteno").value;
-  var winfto = fourteno * 10 / 5;
-  document.getElementById("winfto").value = winfto;
-}
-</script>
-
-    
-
-</body>
-</html>
+  <script>
+  function csep() {
+    var inputsep = document.getElementById("inputsep").value;
+    var inputwsep = inputsep * 7 / 6;
+    document.getElementById("inputwsep").value = inputwsep;
+  }
+  function cseo() {
+    var inputseo = document.getElementById("inputseo").value;
+    var inputwseo = inputseo * 7 / 5;
+    document.getElementById("inputwseo").value = inputwseo;
+  }
+  function cfnp() {
+    var inputfnp = document.getElementById("inputfnp").value;
+    var inputwfnp = inputfnp * 7 / 5;
+    document.getElementById("inputwfnp").value = inputwfnp;
+  }
+  function cfno() {
+    var inputfno = document.getElementById("inputfno").value;
+    var inputwfno = inputfno * 7 / 5;
+    document.getElementById("inputwfno").value = inputwfno;
+  }
+  function cftp() {
+    var inputftp = document.getElementById("inputftp").value;
+    var inputwftp = inputftp * 9 / 5;
+    document.getElementById("inputwftp").value = inputwftp;
+  }
+  function cfto() {
+    var inputfto = document.getElementById("inputfto").value;
+    var inputwfto = inputfto * 10 / 5;
+    document.getElementById("inputwfto").value = inputwfto;
+  }
+  </script>
