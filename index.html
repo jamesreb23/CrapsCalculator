@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Craps Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<center>
+<h1>Craps Calculator</h1>
+<hr>
+
+
+
+  <div>
+    <table>
+      <tr>
+        <td><label for="">6-8 PLACE</label></td>
+        <td><input type="number" id="inputsep"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwsep"></td><br>
+      </tr>
+        <td><button onclick="csep()">Calculate</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">6-8 ODDS</label></td>
+        <td><input type="number" id="inputseo"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwseo"></td>
+      </tr>
+        <td><button onclick="cseo()">Calculate</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">5-9 PLACE</label></td>
+        <td><input type="number" id="inputfnp"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwfnp"></td>
+      </tr>
+        <td><button onclick="cfnp()">Calculate</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">5-9 ODDS</label></td>
+        <td><input type="number" id="inputfno"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwfno"></td>
+      </tr>
+        <td><button onclick="cfno()">Calculate</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">4-10 PLACE</label></td>
+        <td><input type="number" id="inputftp"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwftp"></td>
+      </tr>
+        <td><button onclick="cftp()">Calculate</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">4-10 ODDS</label></td>
+        <td><input type="number" id="inputfto"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwfto"></td>
+      </tr>
+        <td><button onclick="cfto()">Calculate</button></td>
+    </table>
+  </div><hr>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">6-8 HARD</label></td>
+        <td><input type="number" id="inputseh"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwseh"></td>
+      </tr>
+        <td><button onclick="cseh()">Calculate</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">4-10 HARD</label></td>
+        <td><input type="number" id="inputfth"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwfth"></td>
+      </tr>
+        <td><button onclick="cfth()">Calculate</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">SNAKE EYES</label></td>
+        <td><input type="number" id="inputsnake"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwsnake"></td>
+      </tr>
+        <td><button onclick="csnake()">Calculate</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">ACE DEUCE</label></td>
+        <td><input type="number" id="inputacedeuce"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwacedeuce"></td>
+      </tr>
+        <td><button onclick="cacedeuce()">Calculate</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">YO</label></td>
+        <td><input type="number" id="inputyo"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwyo"></td>
+      </tr>
+        <td><button onclick="cyo()">Calculate</button></td>
+    </table>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <td><label for="">BOXCARS</label></td>
+        <td><input type="number" id="inputbox"></td>
+      </tr>
+      <tr>
+        <td><label for="">Won</label></td>
+        <td><input type="number" id="inputwbox"></td>
+      </tr>
+        <td><button onclick="cbox()">Calculate</button></td>
+    </table>
+  </div>
+</center>
+
+
+  <script>
+  function csep() {
+    var inputsep = document.getElementById("inputsep").value;
+    var inputwsep = inputsep * 7 / 6;
+    document.getElementById("inputwsep").value = inputwsep;
+  }
+  function cseo() {
+    var inputseo = document.getElementById("inputseo").value;
+    var inputwseo = inputseo * 7 / 5;
+    document.getElementById("inputwseo").value = inputwseo;
+  }
+  function cfnp() {
+    var inputfnp = document.getElementById("inputfnp").value;
+    var inputwfnp = inputfnp * 7 / 5;
+    document.getElementById("inputwfnp").value = inputwfnp;
+  }
+  function cfno() {
+    var inputfno = document.getElementById("inputfno").value;
+    var inputwfno = inputfno * 7 / 5;
+    document.getElementById("inputwfno").value = inputwfno;
+  }
+  function cftp() {
+    var inputftp = document.getElementById("inputftp").value;
+    var inputwftp = inputftp * 9 / 5;
+    document.getElementById("inputwftp").value = inputwftp;
+  }
+  function cfto() {
+    var inputfto = document.getElementById("inputfto").value;
+    var inputwfto = inputfto * 10 / 5;
+    document.getElementById("inputwfto").value = inputwfto;
+  }
+  function cseh() {
+    var inputseh = document.getElementById("inputseh").value;
+    var inputwseh = inputseh * 9 / 1;
+    document.getElementById("inputwseh").value = inputwseh;
+  }
+  function cfth() {
+    var inputfth = document.getElementById("inputfth").value;
+    var inputwfth = inputfth * 7 / 1;
+    document.getElementById("inputwfth").value = inputwfth;
+  }
+  function csnake() {
+    var inputsnake = document.getElementById("inputsnake").value;
+    var inputwsnake = inputsnake * 30 / 1;
+    document.getElementById("inputwsnake").value = inputwsnake;
+  }
+  function cacedeuce() {
+    var inputacedeuce = document.getElementById("inputacedeuce").value;
+    var inputwacedeuce = inputacedeuce * 15 / 1;
+    document.getElementById("inputwacedeuce").value = inputwacedeuce;
+  }
+  function cyo() {
+    var inputyo = document.getElementById("inputyo").value;
+    var inputwyo = inputyo * 15 / 1;
+    document.getElementById("inputwyo").value = inputwyo;
+  }
+  function cbox() {
+    var inputbox = document.getElementById("inputbox").value;
+    var inputwbox = inputbox * 30 / 1;
+    document.getElementById("inputwbox").value = inputwbox;
+  }
+  </script>
